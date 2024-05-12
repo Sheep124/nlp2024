@@ -1,5 +1,7 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+
 prodata = pd.read_csv('processed_data.csv')
 selected_column = ['lemma_text','Sentiment_Rating']
 prodata.columns
