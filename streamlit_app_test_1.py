@@ -18,8 +18,8 @@ finalData = pd.read_csv('Contraction Review & Sentiment Rating.csv')
 
 # Assuming 'x_train' is your training data
 tfidf_vectorizer = TfidfVectorizer(max_features=1000)
-x = tfidf_vectorizer.fit_transform(finalData['lemma_text'])
-y = finalData['Sentiment_Rating']
+x = tfidf_vectorizer.fit_transform(prodata['lemma_text'])
+y = prodata['Sentiment_Rating']
 
 x_train_tfidf, x_test_tfidf, y_train, y_test = train_test_split(x,y , test_size=0.2, random_state=42)
 
