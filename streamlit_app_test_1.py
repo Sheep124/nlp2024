@@ -28,17 +28,13 @@ st.write('Stopword Removal')
 prodata[['stopword_text','Sentiment_Rating']]
 
 st.write('Stemming & Lemmatisation')
-prodata[['stemming_text','Sentiment_Rating',lemma_text]]
-
-st.write('Cleaned Data')
-prodata[selected_column]
-
-
-
-
-
+prodata[['stemming_text','Sentiment_Rating','lemma_text']]
 
 finalData = pd.read_csv('Contraction Review & Sentiment Rating.csv')
+
+st.write('Cleaned Data')
+finalData[selected_column]
+
 
 # Assuming 'x_train' is your training data
 tfidf_vectorizer = TfidfVectorizer(max_features=1000)
