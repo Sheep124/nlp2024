@@ -15,9 +15,6 @@ prodata.columns
 st.write('Original Text')
 data[['Product Review']]
 
-st.write('Original Text')
-prodata[['Product Review','Sentiment_Rating']]
-
 st.write('Translate Text')
 prodata[['translated_text','Sentiment_Rating']]
 
