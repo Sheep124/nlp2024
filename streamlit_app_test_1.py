@@ -61,7 +61,7 @@ def analyze_sentiment(review):
     if review:
         # Translate the review to Malay
         translation_ms = translator.translate(review, dest='ms')
-        translation_en = translator.translate(translation_ms, dest='en')
+        translation_en = translator.translate(translation_ms.text, dest='en')
         translated_review = translation_en.text
 
         # Vectorize the translated review
