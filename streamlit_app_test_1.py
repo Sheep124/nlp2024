@@ -9,12 +9,15 @@ prodata = pd.read_csv('processed_data.csv')
 selected_column = ['lemma_text','Sentiment_Rating']
 prodata.columns
 
+st.write('Translate Text')
+prodata['translated_text']
+
+
+
+
+st.write('Cleaned Data')
 prodata[selected_column]
 
-
-
-
-st.write('Hello, *World!* :sunglasses:')
 prodata.dropna(subset=['lemma_text', 'Sentiment_Rating'], inplace=True)
 
 
