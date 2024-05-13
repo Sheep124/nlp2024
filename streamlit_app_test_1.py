@@ -5,7 +5,7 @@ import streamlit as st
 from sklearn.feature_extraction.text import TfidfVectorizer
 from googletrans import Translator
 
-data = pd.read_csv('cleaned_dataset.csv')
+data = pd.read_csv('clean_dataset.csv')
 prodata = pd.read_csv('processed_data.csv')
 prodata.dropna(subset=['lemma_text', 'Sentiment_Rating'], inplace=True)
 
