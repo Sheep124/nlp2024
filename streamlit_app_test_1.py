@@ -11,11 +11,23 @@ prodata.dropna(subset=['lemma_text', 'Sentiment_Rating'], inplace=True)
 selected_column = ['lemma_text','Sentiment_Rating']
 prodata.columns
 
+st.write('Original Text')
+prodata[['Product Review','Sentiment_Rating']]
+
 st.write('Translate Text')
-prodata['translated_text']
+prodata[['translated_text','Sentiment_Rating']]
 
+st.write('Tokenise Text')
+prodata[['tokenised_text','Sentiment_Rating']]
 
+st.write('Normalise Text')
+prodata[['normalise_text','Sentiment_Rating']]
 
+st.write('Stopword Removal')
+prodata[['stopword_text','Sentiment_Rating']]
+
+st.write('Stemming & Lemmatisation')
+prodata[['stemming_text','Sentiment_Rating',lemma_text]]
 
 st.write('Cleaned Data')
 prodata[selected_column]
