@@ -60,8 +60,9 @@ rf_predictions_tfidf = rf_classifier_tfidf.predict(x_test_tfidf)
 def analyze_sentiment(review):
     if review:
         # Translate the review to Malay
-        translation = translator.translate(review, dest='ms')
-        translated_review = translation.text
+        translation_ms = translator.translate(review, dest='ms')
+        translation_en = translator.translate(translation_ms, dest='en')
+        translated_review = translation_en.text
 
         # Vectorize the translated review
         review_vectorized = tfidf_vectorizer.transform([translated_review])
