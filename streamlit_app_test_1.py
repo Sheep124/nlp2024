@@ -6,6 +6,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from googletrans import Translator
 
 prodata = pd.read_csv('processed_data.csv')
+prodata.dropna(subset=['lemma_text', 'Sentiment_Rating'], inplace=True)
+
 selected_column = ['lemma_text','Sentiment_Rating']
 prodata.columns
 
@@ -18,7 +20,6 @@ prodata['translated_text']
 st.write('Cleaned Data')
 prodata[selected_column]
 
-prodata.dropna(subset=['lemma_text', 'Sentiment_Rating'], inplace=True)
 
 
 
