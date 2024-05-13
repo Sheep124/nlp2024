@@ -8,6 +8,10 @@ prodata.columns
 
 prodata[selected_column]
 
+
+
+
+st.write('Hello, *World!* :sunglasses:')
 prodata.dropna(subset=['lemma_text', 'Sentiment_Rating'], inplace=True)
 
 
