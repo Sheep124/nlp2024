@@ -2,7 +2,7 @@ googletrans==4.0.0rc1
 pandas
 scikit-learn
 emoji>=1.5.0
-nltk>=3.6.5
+nltk
 googletrans>=4.0.0-rc1
 Sastrawi>=1.0.1
 contractions
