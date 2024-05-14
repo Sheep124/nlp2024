@@ -13,7 +13,6 @@ from nltk.tokenize import word_tokenize
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 from googletrans import Translator
 from nltk.stem import WordNetLemmatizer
-from sklearn.linear_model import LogisticRegression
 
 
 data = pd.read_csv('clean_dataset.csv')
@@ -117,10 +116,10 @@ y = prodata['Sentiment_Rating']
 
 x_train_tfidf, x_test_tfidf, y_train, y_test = train_test_split(x,y , test_size=0.2, random_state=42)
 
-rf_classifier_tfidf = LogisticRegression(**{'C': 1, 'penalty': 'l2', 'solver': 'saga'})
+#rf_classifier_tfidf = LogisticRegression(**{'C': 1, 'penalty': 'l2', 'solver': 'saga'})
 
 
-#rf_classifier_tfidf = RandomForestClassifier(**{'max_depth': 80, 'max_features': 'log2', 'n_estimators': 300})
+rf_classifier_tfidf = RandomForestClassifier(**{'max_depth': 80, 'max_features': 'log2', 'n_estimators': 300})
 
 # Initialize the translator object
 translator = Translator()
