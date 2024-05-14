@@ -142,8 +142,8 @@ def analyze_sentiment(review):
         contra_text   = expand_contractions(punct_text)
         review_toMs   = translate_text_deploy(contra_text,'en','ms')
         review_toEn   = translate_text_deploy(review_toMs,'ms','en')
-        removed_review= remove_stopwords(review_toEn)
-        token_text    = word_tokenize_wrapper(removed_review)
+        #removed_review= remove_stopwords(review_toEn)
+        token_text    = word_tokenize_wrapper(review_toEn)
         #nomalise_text = normalized_term(token_text)
         
         stemming_text = stemming(token_text)
