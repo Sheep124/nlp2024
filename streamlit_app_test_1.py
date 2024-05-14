@@ -164,24 +164,24 @@ def analyze_sentiment(review):
         return "Please enter a review.", None
 
 # Streamlit app
-def main():
-    st.title("Sentiment Analysis")
+# def main():
+#     st.title("Sentiment Analysis")
 
-    # Input text area for entering review
-    review = st.text_area("Enter Review:", height=100)
+#     # Input text area for entering review
+#     review = st.text_area("Enter Review:", height=100)
 
-    # Analyze button to perform sentiment analysis
-    if st.button("Analyze"):
-        sentiment, confidence_level = analyze_sentiment(review)
+#     # Analyze button to perform sentiment analysis
+#     if st.button("Analyze"):
+#         sentiment, confidence_level = analyze_sentiment(review)
         
-        # Display sentiment result
-        if sentiment:
-            if sentiment == 'Positive':
-                st.success(f"It is a {sentiment} review with {confidence_level:.2f}% confidence.")
-            else:
-                st.error(f"It is a {sentiment} review with {confidence_level:.2f}% confidence.")
-        else:
-            st.warning("Please enter a review.")
+#         # Display sentiment result
+#         if sentiment:
+#             if sentiment == 'Positive':
+#                 st.success(f"It is a {sentiment} review with {confidence_level:.2f}% confidence.")
+#             else:
+#                 st.error(f"It is a {sentiment} review with {confidence_level:.2f}% confidence.")
+#         else:
+#             st.warning("Please enter a review.")
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
