@@ -17,6 +17,7 @@ from nltk.stem import WordNetLemmatizer
 nltk.download('punkt')
 
 lemmatizer = WordNetLemmatizer()
+
 data = pd.read_csv('clean_dataset.csv')
 prodata = pd.read_csv('processed_data.csv')
 prodata.dropna(subset=['lemma_text', 'Sentiment_Rating'], inplace=True)
