@@ -14,6 +14,7 @@ from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 from googletrans import Translator
 from nltk.stem import WordNetLemmatizer
 
+nltk.download('punkt')
 
 data = pd.read_csv('clean_dataset.csv')
 prodata = pd.read_csv('processed_data.csv')
