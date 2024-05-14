@@ -18,6 +18,8 @@ nltk.download('punkt')
 nltk.download('stopwords')
 nltk.download('wordnet')
 
+normalized_word = pd.read_csv("normalisasi.csv")
+normalized_word_dict = {}
 
 
 lemmatizer = WordNetLemmatizer()
