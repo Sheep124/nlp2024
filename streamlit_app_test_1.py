@@ -15,6 +15,10 @@ from googletrans import Translator
 from nltk.stem import WordNetLemmatizer
 
 nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet')
+
+
 
 lemmatizer = WordNetLemmatizer()
 
@@ -144,12 +148,12 @@ def analyze_sentiment(review):
         contra_text   = expand_contractions(punct_text)
         review_toMs   = translate_text_deploy(contra_text,'en','ms')
         review_toEn   = translate_text_deploy(review_toMs,'ms','en')
-        #removed_review= remove_stopwords(review_toEn)
-        token_text    = word_tokenize_wrapper(review_toEn)
-        #nomalise_text = normalized_term(token_text)
+        removed_review= remove_stopwords(review_toEn)
+        token_text    = word_tokenize_wrapper(removed_review)
+        nomalise_text = normalized_term(token_text)
         
-        stemming_text = stemming(token_text)
-        lemma_text    = lemmatize_text(token_text)
+        stemming_text = stemming(nomalise_text)
+        lemma_text    = lemmatize_text(nomalise_text)
 
         # Vectorize the translated review
         review_vectorized = tfidf_vectorizer.transform([lemma_text])
